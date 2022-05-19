@@ -4,10 +4,10 @@ using System.Threading.Tasks;
 using Microsoft.CognitiveServices.Speech;
 using Microsoft.CognitiveServices.Speech.Audio;
 
-class Program
+class RecognizeSpeech
 {
-    static string YourSubscriptionKey = "4b3899ee8116451fb14adddc256dc0d5";
-    static string YourServiceRegion = "westus";
+    static string YourSubscriptionKey = "7eb03718341c4d5397f185585d33aa4c";
+    static string YourServiceRegion = "eastus";
 
     static void OutputSpeechRecognitionResult(SpeechRecognitionResult speechRecognitionResult)
     {
@@ -36,7 +36,7 @@ class Program
     async Task Main(string[] args)
     {
         var speechConfig = SpeechConfig.FromSubscription(YourSubscriptionKey, YourServiceRegion);
-        speechConfig.SpeechRecognitionLanguage = "en-IN";
+        speechConfig.SpeechRecognitionLanguage = "en-US";
 
         using var audioConfig = AudioConfig.FromDefaultMicrophoneInput();
         using var speechRecognizer = new SpeechRecognizer(speechConfig, audioConfig);
