@@ -37,6 +37,7 @@ class RecognizeSpeech
     {
         var speechConfig = SpeechConfig.FromSubscription(YourSubscriptionKey, YourServiceRegion);
         speechConfig.SpeechRecognitionLanguage = "en-US";
+        // speechConfig.SpeechRecognitionLanguage = "en-IN";
 
         using var audioConfig = AudioConfig.FromDefaultMicrophoneInput();
         using var speechRecognizer = new SpeechRecognizer(speechConfig, audioConfig);

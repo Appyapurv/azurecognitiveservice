@@ -17,9 +17,9 @@ namespace ComputerVisionQuickstart
         static string endpoint = "https://sample23.cognitiveservices.azure.com/";
         private const string READ_TEXT_URL_IMAGE = "https://raw.githubusercontent.com/Azure-Samples/cognitive-services-sample-data-files/master/ComputerVision/Images/printed_text.jpg";
         // file path- https://raw.githubusercontent.com/Azure-Samples/cognitive-services-sample-data-files/master/ComputerVision/Images/printed_text.jpg
-        static void Main(string[] args)
+         void Main(string[] args)
         {
-            Console.WriteLine("Azure Cognitive Services Computer Vision ");
+            Console.WriteLine("Azure Cognitive Services OCR ");
             Console.WriteLine();
 
             ComputerVisionClient client = Authenticate(endpoint, subscriptionKey);
@@ -70,6 +70,5 @@ namespace ComputerVisionQuickstart
             }
             Console.WriteLine();
         }
-
     }
 }
