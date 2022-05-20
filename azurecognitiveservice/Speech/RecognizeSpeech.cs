@@ -1,12 +1,9 @@
-﻿using System;
-using System.IO;
-using System.Threading.Tasks;
-using Microsoft.CognitiveServices.Speech;
+﻿using Microsoft.CognitiveServices.Speech;
 using Microsoft.CognitiveServices.Speech.Audio;
 
 namespace azurecognitiveservice
 {
-    class RecognizeSpeech
+   public class RecognizeSpeech
     {
         static void OutputSpeechRecognitionResult(SpeechRecognitionResult speechRecognitionResult)
         {
@@ -32,7 +29,7 @@ namespace azurecognitiveservice
             }
         }
 
-        async Task Main(string[] args)
+       public async Task Main(string[] args)
         {
             var speechConfig = SpeechConfig.FromSubscription(Utils.subscriptionKey, Utils.YourServiceRegion);
             speechConfig.SpeechRecognitionLanguage = "en-US";

@@ -16,7 +16,7 @@ namespace azurecognitiveservice
         public readonly int value = 0;
         private const string READ_TEXT_URL_IMAGE = "https://raw.githubusercontent.com/Azure-Samples/cognitive-services-sample-data-files/master/ComputerVision/Images/printed_text.jpg";
         // file path- https://raw.githubusercontent.com/Azure-Samples/cognitive-services-sample-data-files/master/ComputerVision/Images/printed_text.jpg
-        public static void Main(string[] args)
+        public  void Main(string[] args)
         {
             Console.WriteLine("Azure Cognitive Services OCR ");
             Console.WriteLine();

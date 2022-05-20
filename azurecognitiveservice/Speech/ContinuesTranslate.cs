@@ -3,7 +3,7 @@ using Microsoft.CognitiveServices.Speech.Translation;
 
 namespace azurecognitiveservice
 {
-    public class ContinousTranslate
+    public class ContinuesTranslate
     {
         public static async Task TranslationContinuousRecognitionAsync()
         {
@@ -79,7 +79,7 @@ namespace azurecognitiveservice
             }
         }
 
-        async  Task Main(string[] args)
+        public async Task Main(string[] args)
         {
             await TranslationContinuousRecognitionAsync();
         }
