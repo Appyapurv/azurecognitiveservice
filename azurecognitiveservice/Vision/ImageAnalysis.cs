@@ -1,29 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.Azure.CognitiveServices.Vision.ComputerVision;
+﻿using Microsoft.Azure.CognitiveServices.Vision.ComputerVision;
 using Microsoft.Azure.CognitiveServices.Vision.ComputerVision.Models;
-using System.Threading.Tasks;
-using System.IO;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using System.Threading;
-using System.Linq;
 
-namespace ComputerVisionQuickstart1
+namespace azurecognitiveservice
 {
     public class ImageAnalysis
     {
-        static string subscriptionKey = "7eb03718341c4d5397f185585d33aa4c";
-        static string endpoint = "https://sample23.cognitiveservices.azure.com/";
         private const string ANALYZE_URL_IMAGE = "https://moderatorsampleimages.blob.core.windows.net/samples/sample16.png";
 
-        static void Main(string[] args)
+        public  void Main(string[] args)
         {
             Console.WriteLine("Azure Cognitive Services Computer Vision");
             Console.WriteLine();
-            ComputerVisionClient client = Authenticate(endpoint, subscriptionKey);
+            ComputerVisionClient client = Authenticate(Utils.endpoint, Utils.subscriptionKey);
 
             AnalyzeImageUrl(client, ANALYZE_URL_IMAGE).Wait();
+            Console.WriteLine("enter something to stop");
+            var read = Console.ReadLine();
         }
 
         public static ComputerVisionClient Authenticate(string endpoint, string key)

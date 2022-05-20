@@ -9,22 +9,23 @@ using Newtonsoft.Json.Linq;
 using System.Threading;
 using System.Linq;
 
-namespace ComputerVisionQuickstart
+namespace azurecognitiveservice
 {
     public class OCR
     {
-        static string subscriptionKey = "7eb03718341c4d5397f185585d33aa4c";
-        static string endpoint = "https://sample23.cognitiveservices.azure.com/";
+        public readonly int value = 0;
         private const string READ_TEXT_URL_IMAGE = "https://raw.githubusercontent.com/Azure-Samples/cognitive-services-sample-data-files/master/ComputerVision/Images/printed_text.jpg";
         // file path- https://raw.githubusercontent.com/Azure-Samples/cognitive-services-sample-data-files/master/ComputerVision/Images/printed_text.jpg
-         void Main(string[] args)
+        public  void Main(string[] args)
         {
             Console.WriteLine("Azure Cognitive Services OCR ");
             Console.WriteLine();
 
-            ComputerVisionClient client = Authenticate(endpoint, subscriptionKey);
+            ComputerVisionClient client = Authenticate(Utils.endpoint, Utils.subscriptionKey);
 
             ReadFileUrl(client, READ_TEXT_URL_IMAGE).Wait();
+            Console.WriteLine("enter something to stop");
+            var read = Console.ReadLine();
         }
 
         public static ComputerVisionClient Authenticate(string endpoint, string key)
