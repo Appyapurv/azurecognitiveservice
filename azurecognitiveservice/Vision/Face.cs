@@ -5,7 +5,7 @@ namespace azurecognitiveservice.Vision
 {
     public class Face
     {
-        private const string localImagePath = @"C:\Users\apurv\OneDrive\Desktop\3.jpg";
+        private const string localImagePath = @"C:\Users\apurv\OneDrive\Desktop\5.jpg";
 
         private const string remoteImageUrl =
             "https://upload.wikimedia.org/wikipedia/commons/3/37/Dagestani_man_and_woman.jpg";
@@ -49,8 +49,6 @@ namespace azurecognitiveservice.Vision
                 Console.WriteLine(imageUrl + ": " + e.Message);
             }
         }
-
-        // Detect faces in a local image
         private static async Task DetectLocalAsync(FaceClient faceClient, string imagePath)
         {
             if (!File.Exists(imagePath))
