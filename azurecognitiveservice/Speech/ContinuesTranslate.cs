@@ -5,7 +5,7 @@ namespace azurecognitiveservice
 {
     public class ContinuesTranslate
     {
-        public static async Task TranslationContinuousRecognitionAsync()
+        public async Task TranslationContinuousRecognitionAsync()
         {
             var config = SpeechTranslationConfig.FromSubscription(Utils.subscriptionKey, Utils.YourServiceRegion);
             string fromLanguage = "en-US";

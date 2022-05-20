@@ -5,7 +5,7 @@ namespace azurecognitiveservice
 {
     class ContinuesSpeechToText
     {
-        public static async Task Main(string[] args)
+        public async Task Main(string[] args)
         {
             var speechConfig = SpeechConfig.FromSubscription(Utils.subscriptionKey, Utils.YourServiceRegion);
             speechConfig.SpeechRecognitionLanguage = "en-US";
